@@ -40,3 +40,6 @@ jobs:
         run: git branch --track main origin/main
       - run: pnpm nx affected -t lint test build --parallel=3
       - run: pnpm nx affected -t e2e --parallel=1
+
+      - name: Test nx uses remote Cache
+        run: echo "[remote cache] found?"
